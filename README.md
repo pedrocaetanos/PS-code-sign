@@ -63,7 +63,12 @@ Set-AuthenticodeSignature script.ps1 @(Get-ChildItem -Path cert:\CurrentUser\My 
 ```
 
 ## Comments
-However, self-signed certificate usage for code signing in production environments is dsicouraged. You should use them in test environments only.
+Import the certificate into __Trusted Root Certification Authorities__ to be able to run a signed script with the AllSigned or
+RemoteSigned execution policy.
+
+Answering _[A] Always run_ to first time prompt will import the certificate into __Trusted Publishers__.
+
+However, self-signed certificate usage for code signing in production environments is discouraged. You should use them in test environments only.
 
 For private usage (within organization only), you should check if company already owns PKI infrastructure and contact appropriate personnel to receive company-approved code signing certificate.
 
