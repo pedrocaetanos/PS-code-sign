@@ -21,31 +21,31 @@ Certreq –new path\inffilename.inf
 
 inffilename.inf:
 ```
- [NewRequest]
- Subject = "CN=Test Code Signing"
- KeyLength = 2048
- KeyAlgorithm = RSA
- ProviderName = "Microsoft Enhanced RSA and AES Cryptographic Provider"
- MachineKeySet = false
- Exportable = true
- KeySpec = 2
- KeyUsage = 0x80
- RequestType = Cert
- [EnhancedKeyUsageExtension]
- OID=1.3.6.1.5.5.7.3.3 ; Code signing
+[NewRequest]
+Subject = "CN=Test Code Signing"
+KeyLength = 2048
+KeyAlgorithm = RSA
+ProviderName = "Microsoft Enhanced RSA and AES Cryptographic Provider"
+MachineKeySet = false
+Exportable = true
+KeySpec = 2
+KeyUsage = 0x80
+RequestType = Cert
+[EnhancedKeyUsageExtension]
+OID=1.3.6.1.5.5.7.3.3 ; Code signing
 ```
 
 ## Windows 10
 __New-SelfSignedCertificate__ PowerShell cmdlet
 ```
- New-SelfSignedCertificate -CertStoreLocation cert:\currentuser\my `
- -Subject "CN=Test Code Signing" `
- -KeyAlgorithm RSA `
- -KeyLength 2048 `
- -Provider "Microsoft Enhanced RSA and AES Cryptographic Provider" `
- -KeyExportPolicy Exportable `
- -KeyUsage DigitalSignature `
- -Type CodeSigningCert
+New-SelfSignedCertificate -CertStoreLocation cert:\currentuser\my `
+-Subject "CN=Test Code Signing" `
+-KeyAlgorithm RSA `
+-KeyLength 2048 `
+-Provider "Microsoft Enhanced RSA and AES Cryptographic Provider" `
+-KeyExportPolicy Exportable `
+-KeyUsage DigitalSignature `
+-Type CodeSigningCert
 ```
 
 ## Alternative
@@ -57,6 +57,11 @@ Dir code signing certificates
 gci cert: -rec -code
 ```
 
+Sign script
+```
+Set-AuthenticodeSignature script.ps1 @(Get-ChildItem -Path cert:\CurrentUser\My -CodeSigningCert)
+```
+
 ## Comments
 However, self-signed certificate usage for code signing in production environments is dsicouraged. You should use them in test environments only.
 
@@ -66,3 +71,4 @@ For public scripts (you are going to distribute along with software packages, or
 
 ## Reference
 https://serverfault.com/questions/824574/create-code-signing-certificate-on-windows-for-signing-powershell-scripts
+https://ss64.com/ps/set-authenticodesignature.html
