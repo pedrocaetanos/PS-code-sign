@@ -66,7 +66,7 @@ Set-AuthenticodeSignature script.ps1 @(Get-ChildItem -Path cert:\CurrentUser\My 
 Import the certificate into __Trusted Root Certification Authorities__ to be able to run a signed script with the AllSigned or
 RemoteSigned execution policy.
 
-Answering _[A] Always run_ to first time prompt will import the certificate into __Trusted Publishers__.
+Answering _[A] Always run_ to the first time prompt will import the certificate into __Trusted Publishers__.
 
 However, self-signed certificate usage for code signing in production environments is discouraged. You should use them in test environments only.
 
