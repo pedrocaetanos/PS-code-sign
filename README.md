@@ -75,6 +75,6 @@ For private usage (within organization only), you should check if company alread
 For public scripts (you are going to distribute along with software packages, or deliver scripts to your customers), I would suggest to purchase code signing from globally trusted commercial CA provider.
 
 ## Reference
-https://serverfault.com/questions/824574/create-code-signing-certificate-on-windows-for-signing-powershell-scripts
-https://ss64.com/ps/set-authenticodesignature.html 
-https://www.hanselman.com/blog/SigningPowerShellScripts.aspx
+https://serverfault.com/questions/824574/create-code-signing-certificate-on-windows-for-signing-powershell-scripts  
+https://ss64.com/ps/set-authenticodesignature.html  
+https://www.hanselman.com/blog/SigningPowerShellScripts.aspx  
