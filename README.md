@@ -39,7 +39,7 @@ OID=1.3.6.1.5.5.7.3.3 ; Code signing
 __New-SelfSignedCertificate__ PowerShell cmdlet
 ```
 New-SelfSignedCertificate -CertStoreLocation cert:\currentuser\my `
--Subject "CN=Test Code Signing" `
+-Subject "CN=PowerShell Code Signing" `
 -KeyAlgorithm RSA `
 -KeyLength 2048 `
 -Provider "Microsoft Enhanced RSA and AES Cryptographic Provider" `
