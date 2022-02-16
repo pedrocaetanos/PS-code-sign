@@ -9,7 +9,7 @@ New-SelfsignedCertificateEx -Subject "CN=Test Code Signing" `
 -EKU "Code Signing" `
 -KeySpec "Signature" ` 
 -KeyUsage "DigitalSignature" `
--FriendlyName "Test code signing"
+-FriendlyName "Pedro Caetano S."
 -NotAfter $([datetime]::now.AddYears(5))
 ```
 
@@ -22,7 +22,7 @@ Certreq –new path\inffilename.inf
 inffilename.inf:
 ```
 [NewRequest]
-Subject = "CN=Test Code Signing"
+Subject = "CN=Pedro Caetano S."
 KeyLength = 2048
 KeyAlgorithm = RSA
 ProviderName = "Microsoft Enhanced RSA and AES Cryptographic Provider"
@@ -39,9 +39,8 @@ OID=1.3.6.1.5.5.7.3.3 ; Code signing
 __New-SelfSignedCertificate__ PowerShell cmdlet
 ```
 New-SelfSignedCertificate -CertStoreLocation cert:\currentuser\my `
--Subject "CN=PowerShell Code Signing" `
--KeyAlgorithm RSA `
--KeyLength 2048 `
+-Subject "CN=Pedro Caetano S." `
+-HashAlgorithm SHA256 `
 -Provider "Microsoft Enhanced RSA and AES Cryptographic Provider" `
 -KeyExportPolicy Exportable `
 -KeyUsage DigitalSignature `
