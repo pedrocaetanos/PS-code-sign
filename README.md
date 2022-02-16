@@ -78,6 +78,11 @@ The digital signature in a script is valid until the signing certificate expires
 
 Because most signing certificates are valid for one year only, using a time stamp server ensures that users can use your script for many years to come.
 
+Sign script
+```
+Set-AuthenticodeSignature script.ps1 @(Get-ChildItem -Path cert:\CurrentUser\My -CodeSigningCert) -TimestampServer http://server
+```
+
 ### Timestamp servers:
 * http://timestamp.digicert.com
 * http://timestamp.comodoca.com/authenticode
