@@ -58,7 +58,7 @@ gci cert: -rec -code
 
 Sign script
 ```
-Set-AuthenticodeSignature script.ps1 @(Get-ChildItem -Path cert:\CurrentUser\My -CodeSigningCert)
+Set-AuthenticodeSignature script.ps1 @(Get-ChildItem -Path cert:\CurrentUser\My -CodeSigningCert)[0]
 ```
 
 ## Comments
@@ -80,7 +80,7 @@ Because most signing certificates are valid for one year only, using a time stam
 
 Sign script
 ```
-Set-AuthenticodeSignature script.ps1 @(Get-ChildItem -Path cert:\CurrentUser\My -CodeSigningCert) -TimestampServer http://server
+Set-AuthenticodeSignature script.ps1 @(Get-ChildItem -Path cert:\CurrentUser\My -CodeSigningCert)[0] -TimestampServer http://server
 ```
 
 ### Timestamp servers:
