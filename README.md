@@ -78,3 +78,6 @@ For public scripts (you are going to distribute along with software packages, or
 https://serverfault.com/questions/824574/create-code-signing-certificate-on-windows-for-signing-powershell-scripts  
 https://ss64.com/ps/set-authenticodesignature.html  
 https://www.hanselman.com/blog/SigningPowerShellScripts.aspx  
+
+## Additional documentation
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-authenticodesignature?view=powershell-7.2
