@@ -73,12 +73,20 @@ For private usage (within organization only), you should check if company alread
 
 For public scripts (you are going to distribute along with software packages, or deliver scripts to your customers), I would suggest to purchase code signing from globally trusted commercial CA provider.
 
+## Prevent the signature from expiring
+The digital signature in a script is valid until the signing certificate expires or as long as a timestamp server can verify that the script was signed while the signing certificate was valid.
+
+Because most signing certificates are valid for one year only, using a time stamp server ensures that users can use your script for many years to come.
+
+### Timestamp servers:
+. http://timestamp.verisign.com/scripts/timstamp.dll
+
 ## Reference
 https://serverfault.com/questions/824574/create-code-signing-certificate-on-windows-for-signing-powershell-scripts  
 https://ss64.com/ps/set-authenticodesignature.html  
 https://www.hanselman.com/blog/SigningPowerShellScripts.aspx  
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_signing?view=powershell-7.2
 
 ## Additional documentation
-https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_signing?view=powershell-7.2
 https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-authenticodesignature?view=powershell-7.2
 https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85)
