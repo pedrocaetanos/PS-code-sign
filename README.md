@@ -79,7 +79,9 @@ The digital signature in a script is valid until the signing certificate expires
 Because most signing certificates are valid for one year only, using a time stamp server ensures that users can use your script for many years to come.
 
 ### Timestamp servers:
-. http://timestamp.verisign.com/scripts/timstamp.dll
+* http://timestamp.verisign.com/scripts/timstamp.dll
++ http://timestamp.verisign.com/scripts/timstamp.dll
+- http://timestamp.verisign.com/scripts/timstamp.dll
 
 ## Reference
 https://serverfault.com/questions/824574/create-code-signing-certificate-on-windows-for-signing-powershell-scripts  
